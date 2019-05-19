@@ -52,7 +52,8 @@ def trans_hex_chinese(hex_json):
     chinese_json = hex_encode.decode()
     return chinese_json
 
-test_json = """{"name":'\x6F'，"chart":\"label\","myfriend":"\xE6\x9F\xB3\xE4\xBA\x91","number":10.11.12.12,"radix":-12,"URL":"Http://gkate.com","remote_addr":application/json;charset=utf-8,"number-two":"22.11.12.12","day1":{"day1-1":'alex',"day1-2":[1,3,2],"day1-3":"gkate","day1-4":{"day4":15,"day5":16}},"ip":hostname}"""
+# for i in range(5000):
+test_json = """{"name":"\x6F"，"chart":\"label\","myfriend":"\xE6\x9F\xB3\xE4\xBA\x91","number":"10.11.12.12","radix":-12,"URL":"Http://gkate.com","remote_addr":application/json;charset=utf-8,"number-two":"22.11.12.12","day1":{"day1-1":'alex',"day1-2":[1,3,2],"day1-3":"gkate","day1-4":{"day4":15,"day5":16}},"ip":hostname}"""
 # 1
 chinese_json = trans_hex_chinese(test_json)
 # 2
